@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="../css/roboto.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/tool_webhook_main.css"/>
+    <script src="../js/ajax.js"></script>
+    <script src="../js/lodash.js"></script>
+    <script defer src="../js/script.js"></script>
+    <script defer src="../js/autoExpand.js"></script>
+    <script src="../js/autosize.js"></script>
+	<link rel="icon" href="../assets/ico_webhook.png">
+    <title>Azulix</title>
+  </head>
+
+  <body>
+  <button class="button-9" onclick="location.href='../index.html'" >Retour</button>
+      <h1>Webhook Tool</h1>
+      <label for="weburl"><span class="rqs" title="This is required">*</span> Webhook URL <a href="https://www.socialoomph.com/help/view/help_discord_webhook_how/">Comment créer un webhook</a></label>
+      <input type="text" id="url" name="weburl" style="width: 20em" />
+      <p class="validation" id="urlValidation"></p>
+      <br/><br/>
+      <div class="inlblock">
+        <label for="nick">Pseudo du webhook</label>
+        <input type="text" id="nick" name="nick" maxlength="32"/>
+      </div>
+      <div class="inlblock" style="margin-left: 40px;">
+        <label for="avatar">Avatar URL du webhook</label>
+        <input type="url" id="avatar" name="avatar" class="inlblock" style="width: 20em;"/>
+      </div>
+      <br/><br/><br/>
+      <div class="inlblock">
+        <label for="text">Contenu du message</label>
+        <textarea class="autoExpand" id="text" name="text" data-min-rows="1" rows="1" cols="50" maxlength="2000"></textarea>
+      </div>
+      <div class="inlblock" style="margin-left: 40px;">
+        <label for="tts" style="margin-bottom: 5px;">Utiliser le TTS, (Le message sera lu)</label>
+        <label class="switch">
+          <input type="checkbox" id="tts" name="tts"/>
+          <div class="slider round"></div>
+        </label>
+      </div>
+      <div id="send" class="dbutton">Envoyer</div>
+      <h2>Embeds</h2>
+      <div id="embeds">
+      </div>
+      <div id="newemb" class="dbutton">Ajouter un Embed</div>
+  </body>
+</html>
